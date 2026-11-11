@@ -1,0 +1,19 @@
+# Ejecutables
+*.exe
+simulador
+simulador.exe
+*.out
+
+# Archivos de compilación
+*.o
+*.obj
+
+# Archivos temporales y del editor
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
