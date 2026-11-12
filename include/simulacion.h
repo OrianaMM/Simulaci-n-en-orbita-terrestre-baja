@@ -15,4 +15,6 @@ typedef struct {
 /* Calcula una maniobra lateral con aceleración constante. */
 ResultadoManiobra simularManiobraLateral(double aceleracion, double duracion);
 
+void inicializarMision(Mision *mision);
+
 #endif
