@@ -16,7 +16,7 @@ double calcularVelocidadOrbital(const Mision *mision);
 /* Devuelve el período orbital en segundos. */
 double calcularPeriodoOrbital(const Mision *mision);
 
-/* Devuelve la aceleración centrípeta en m/s². */
+/* Devuelve la aceleración centrípeta en m/s² de los astronautas */
 double calcularAceleracionCentripeta(const Mision *mision);
 
 #endif

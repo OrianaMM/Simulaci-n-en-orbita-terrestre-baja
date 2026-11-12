@@ -12,9 +12,8 @@ typedef enum {
     PANTALLA_MISION
 } Pantalla;
 
-// ----------------------------------------------------
-// FUNCIONES AUXILIARES DE DIBUJO
-// ----------------------------------------------------
+/* FUNCIONES AUXILIARES DE DIBUJO*/
+
 
 static Vector2 sumar(Vector2 a, Vector2 b) {
     return (Vector2){a.x + b.x, a.y + b.y};
