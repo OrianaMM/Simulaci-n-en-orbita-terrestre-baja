@@ -1,7 +1,7 @@
-#include "fisica.h"
 #include "simulacion.h"
 #include "analisis.h"
 #include "interfaz.h"
+#include "fisica.h"
 
 int main(void) {
     Mision mision;
@@ -10,7 +10,9 @@ int main(void) {
 
     ejecutarAnalisis(&mision);
 
-   iniciarInterfaz(&mision);
+    analizarPulsoLateralDinamico(&mision);
+
+    iniciarInterfaz(&mision);
 
     return 0;
 }
