@@ -2,25 +2,17 @@
 #include <stddef.h>
 #include "fisica.h"
 
-double calcularRadioOrbital(const Mision *mision) {
-    if (mision == NULL) return 0.0;
-    return mision->radioTierra + mision->alturaOrbital;
-}
+/*constantes de calculo dadas por el problema*/
+#define PI 3.14159265358979323846 
 
 double calcularVelocidadOrbital(const Mision *mision) {
-    /* TODO: implementar sqrt(G * MT / r), validando los datos. */
-    (void)mision;
-    return 0.0;
+    return sqrt(mision->G * mision->MT / r);
 }
 
 double calcularPeriodoOrbital(const Mision *mision) {
-    /* TODO: implementar 2 * PI * sqrt(r^3 / (G * MT)). */
-    (void)mision;
-    return 0.0;
+    return 2 * PI * sqrt(pow(r, 3) / (mision->G * mision->MT));
 }
 
 double calcularAceleracionCentripeta(const Mision *mision) {
-    /* TODO: implementar G * MT / r^2. */
-    (void)mision;
-    return 0.0;
+    return mision->G * mision->MT / pow(r, 2);
 }

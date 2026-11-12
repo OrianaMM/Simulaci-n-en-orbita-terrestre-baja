@@ -2,15 +2,13 @@
 #define FISICA_H
 
 typedef struct {
-    double masaTierra;       /* kg */
-    double radioTierra;      /* m */
-    double alturaOrbital;    /* m */
-    double masaOrion;        /* kg */
-    double constanteG;       /* N·m²/kg² */
+    double MT;       /* kg */
+    double RT;      /* m */
+    double h;    /* m */
+    double masaNave;        /* kg */
+    double G;       /* N·m²/kg² */
+    double r;       /* m */
 } Mision;
-
-/* Devuelve el radio orbital: radio terrestre + altura. */
-double calcularRadioOrbital(const Mision *mision);
 
 /* Devuelve la velocidad orbital circular en m/s. */
 double calcularVelocidadOrbital(const Mision *mision);
