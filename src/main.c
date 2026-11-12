@@ -4,18 +4,18 @@
 #include "validaciones.h"
 
 void ejecutarAnalisis(const Mision *mision) {
-    printf("  Demostración analítica de que la atracción gravitatoria actúa como la fuerza centrípeta del sistema\n");
+    printf("Demostración analítica de que la atracción gravitatoria actúa como la fuerza centrípeta del sistema\n");
     /*se muestran los datos fijo*/
-    printf(" Datos base de la mision:\n");
-    printf("    - Radio de la Tierra:  %.2f m\n", mision->RT);
-    printf("    - Altura orbital:       %.2f m\n", mision->h);
-    printf("    - Radio orbital total:  %.2f m\n", mision->r);
-    printf("    - Masa de la nave: %.2f kg\n\n", mision->masaNave);
+    printf(" Datos de la mision:\n");
+    printf("-Radio de la Tierra: %.2f m\n", mision->RT);
+    printf("-Altura orbital: %.2f m\n", mision->h);
+    printf("-Radio orbital total: %.2f m\n", mision->r);
+    printf("-Masa de la nave: %.2f kg\n\n", mision->masaNave);
 
     /*resolución de fuerzas (F_g = F_c)*/
-    printf(" Analisis de fuerzas:\n");
-    printf(" F_g (Gravedad Newtoniana) = G * (MT * m) / r^2\n");
-    printf(" F_c (Fuerza Centripeta)   = m * (v^2 / r)\n");
+    printf("Analisis de fuerzas:\n");
+    printf("F_g (Gravedad Newtoniana)= G * (MT * m) / r^2\n");
+    printf("F_c (Fuerza Centripeta)= m * (v^2 / r)\n");
     printf("Como F_g actua como la unica fuerza neta hacia el centro,\n");
     printf("se confirma que F_g = F_c, permitiendo despejar v.\n\n");
 
@@ -42,6 +42,6 @@ int main(void) {
     /* TODO: inicializar la misión, mostrar el menú y coordinar las opciones. */
     printf("Simulador de órbita terrestre baja (LEO) - Orion\n");
     printf("Estructura inicial del proyecto.\n");
-    ejecutarAnalisis(&mision);
+
     return 0;
 }
