@@ -1,7 +1,6 @@
-#include "simulacion.h"
+#include <stddef.h>
 #include "simulacion.h"
 #include "fisica.h"
-#include <stddef.h>
 
 void inicializarMision(Mision *mision) {
     if (mision == NULL) {
@@ -14,4 +13,15 @@ void inicializarMision(Mision *mision) {
     mision->masaNave = 33000.0;
     mision->G = 6.674e-11;
     mision->r = mision->RT + mision->h;
+}
+
+ResultadoManiobra simularManiobraLateral(double aceleracion, double duracion) {
+    ResultadoManiobra resultado = {0};
+
+    resultado.aceleracionLateral = aceleracion;
+    resultado.duracion = duracion;
+    resultado.velocidadLateral = aceleracion * duracion;                   /* v = a * t */
+    resultado.desplazamiento = 0.5 * aceleracion * duracion * duracion;    /* s = 1/2 * a * t^2 */
+
+    return resultado;
 }
